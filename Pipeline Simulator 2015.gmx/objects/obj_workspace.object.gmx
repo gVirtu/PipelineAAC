@@ -39,6 +39,15 @@ dlg = noone;
 global.ultstring="add $t0 $t1 $t2"
 strhelp = "PIPELINE SIMULATOR 2015##CONTROLES:#'I' ou clique no '+' - Adiciona instrução ao pipeline#Clique e arraste instrução para trocar a sua posição com a posição de outra#Clique direito em instrução para removê-la#Clique duplo em instrução para renomeá-la#Clique e arraste estágio para reposicioná-lo na pipeline#Arraste estágio para outro para representar um forward#Arraste no sentido contrário ao forward para removê-lo#Analogamente, para representar uma dependência, use o botão direito para arrastar#'E' para editar os estágios de uma instrução#'S' mostra alguns dados úteis (ou não)#'H' para mostrar essa janela novamente.";
 show_message_async(strhelp);
+
+maxcch = (browser_width-vb_x-1) div ssep;
+maxccv = (browser_height-hb_y-1) div ssep;
+window_set_size(maxcch*ssep + vb_x, maxccv*ssep + hb_y);
+view_wview[0] = window_get_width();
+view_wport[0] = window_get_width();
+view_hview[0] = window_get_height();
+view_hport[0] = window_get_height();
+surface_resize(application_surface, window_get_width(), window_get_height());
 </string>
           </argument>
         </arguments>
